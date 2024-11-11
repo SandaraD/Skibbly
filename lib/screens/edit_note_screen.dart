@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_simple_notes_cw1a/db/database_helper.dart';
-import 'package:my_simple_notes_cw1a/note.dart';
+import '../model/note.dart';
 
 class EditNoteScreen extends StatefulWidget {
   final Note note;
@@ -48,7 +48,8 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Edit Note')),
+      appBar: AppBar(title: Text('Edit Note'),
+      backgroundColor: Colors.teal[100],),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -66,6 +67,10 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: _updateNote,
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.teal[100],
+                  foregroundColor: Colors.black
+              ),
               child: Text('Save Changes'),
             ),
           ],

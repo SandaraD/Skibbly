@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../db/database_helper.dart';
-import '../note.dart';
+import '../model/note.dart';
 
 class AddNoteScreen extends StatefulWidget {
   @override
